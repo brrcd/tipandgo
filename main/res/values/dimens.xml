@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_margin">20dp</dimen>
+    <dimen name="bottom_margin">30dp</dimen>
+    <dimen name="between_margin">16dp</dimen>
+    <dimen name="sides_margin">16dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+
+    <dimen name="tags2_text_size">10sp</dimen>
+    <dimen name="tags1_text_size">14sp</dimen>
+    <dimen name="subtitle_text_size">13sp</dimen>
+    <dimen name="paragraph1_text_size">16sp</dimen>
+    <dimen name="paragraph2_text_size">14sp</dimen>
+    <dimen name="heading1_text_size">20sp</dimen>
+    <dimen name="heading2_text_size">17sp</dimen>
+
+    <dimen name="medium_elevation">4dp</dimen>
+    <dimen name="small_elevation">1dp</dimen>
+    <dimen name="no_elevation">0dp</dimen>
+
+    <dimen name="selector_rounded_corners">10dp</dimen>
+    <dimen name="card_view_corner_radius">10dp</dimen>
+
+    <dimen name="small_star_size">16dp</dimen>
+
+    <dimen name="review_star_drawable_padding">4dp</dimen>
+    <dimen name="edit_text_top_padding">5dp</dimen>
+    <dimen name="tab_indicator_size">8dp</dimen>
+    <dimen name="action_card_button_icon_size">24dp</dimen>
+    <dimen name="action_card_button_corners">6dp</dimen>
+    <dimen name="action_card_button_size">32dp</dimen>
+    <dimen name="payout_card_width">22dp</dimen>
+    <dimen name="payout_card_height">18dp</dimen>
+    <dimen name="close_button_size">32dp</dimen>
+    <dimen name="avatar_image_size">56dp</dimen>
+    <dimen name="custom_text_input_height">56dp</dimen>
+    <dimen name="country_hint_horizontal_margin">14dp</dimen>
+    <dimen name="spinner_hint_horizontal_margin">14dp</dimen>
+    <dimen name="custom_tab_height">44dp</dimen>
+    <dimen name="thumbs_up_with_shadow_height">200dp</dimen>
+    <dimen name="chart_height">250dp</dimen>
+</resources>

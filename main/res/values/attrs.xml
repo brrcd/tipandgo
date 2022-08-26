@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTabLayout">
+        <attr name="first_tab_text" format="string"/>
+        <attr name="second_tab_text" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CustomTextInputLayout">
+        <attr name="android:inputType"/>
+        <attr name="label_text" format="string|reference"/>
+    </declare-styleable>
+    <declare-styleable name="CustomPhoneEditText">
+        <attr name="isEnabled" format="boolean"/>
+    </declare-styleable>
+</resources>

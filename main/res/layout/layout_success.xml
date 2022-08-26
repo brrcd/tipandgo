@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <!--    todo extract height    -->
+    <include
+        android:id="@+id/thumbs_up_frame"
+        layout="@layout/thumbs_up_frame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/thumbs_up_with_shadow_height"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/success_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/between_margin"
+        android:textAlignment="center"
+        android:textAppearance="@style/Heading1"
+        tools:text="@string/lorem_ipsum"/>
+
+</LinearLayout>

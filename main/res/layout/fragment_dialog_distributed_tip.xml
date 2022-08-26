@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_margin">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/Heading1"
+            tools:text="Title" />
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="@dimen/close_button_size"
+            android:layout_height="@dimen/close_button_size"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/between_margin"
+            android:scaleType="center"
+            android:src="@drawable/icon_close"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tip_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/between_margin"
+        android:textAppearance="@style/Heading1"
+        tools:text="6,9$" />
+
+    <TextView
+        android:id="@+id/distribution_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/between_margin"
+        android:textAppearance="@style/Paragraph2"
+        android:textColor="@color/grey"
+        tools:text="22 Jan 2022, 22:14" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tip_destinations_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_tip_destination" />
+
+</LinearLayout>

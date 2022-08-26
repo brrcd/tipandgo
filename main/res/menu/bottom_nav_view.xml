@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/dashboardNavigation"
+        android:title="@string/dashboard_tab"
+        android:icon="@drawable/icon_dashboard"/>
+    <item
+        android:id="@id/tipsFragment"
+        android:title="@string/tips_tab"
+        android:icon="@drawable/icon_tips"/>
+    <item
+        android:id="@id/reviewsFragment"
+        android:title="@string/reviews_tab"
+        android:icon="@drawable/icon_reviews" />
+    <item
+        android:id="@id/profileNavigation"
+        android:title="@string/profile_tab"
+        android:icon="@drawable/icon_profile"/>
+</menu>

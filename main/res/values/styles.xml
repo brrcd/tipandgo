@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Heading1">
+        <item name="android:textSize">@dimen/heading1_text_size</item>
+        <item name="android:textColor">@color/extra_dark_blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Heading2">
+        <item name="android:textSize">@dimen/heading2_text_size</item>
+        <item name="android:textColor">@color/extra_dark_blue</item>
+    </style>
+
+    <style name="Subtitle">
+        <item name="android:textSize">@dimen/subtitle_text_size</item>
+        <item name="android:textColor">@color/extra_dark_blue</item>
+    </style>
+
+    <style name="Paragraph1">
+        <item name="android:textSize">@dimen/paragraph1_text_size</item>
+        <item name="android:textColor">@color/extra_dark_blue</item>
+    </style>
+
+    <style name="Paragraph2">
+        <item name="android:textSize">@dimen/paragraph2_text_size</item>
+        <item name="android:textColor">@color/extra_dark_blue</item>
+    </style>
+
+    <style name="Paragraph2.Blue" parent="Paragraph2">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Tags1">
+        <item name="android:textSize">@dimen/tags1_text_size</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="Tags1.TipRate" parent="Tags1">
+        <item name="android:background">@drawable/tip_rate_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Tags2">
+        <item name="android:textSize">@dimen/tags2_text_size</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="CustomTextInput.Hint">
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:textSize">@dimen/tags2_text_size</item>
+    </style>
+
+    <style name="TagsDescription" parent="Tags1">
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textAppearance">@style/Tags1</item>
+    </style>
+
+    <style name="TagsContent" parent="Tags1">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="CustomTabText">
+        <item name="android:textSize">@dimen/subtitle_text_size</item>
+        <item name="android:textColor">@color/extra_dark_blue</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="CustomTextInput" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundMode">none</item>
+        <item name="android:background">@drawable/custom_text_input_bg</item>
+        <item name="android:textColorHint">@color/grey</item>
+    </style>
+
+    <style name="CustomTextEdit" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="background">@null</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textAppearance">@style/Paragraph2</item>
+        <item name="android:paddingTop">@dimen/edit_text_top_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CustomCardStyle" parent="CardView">
+        <item name="cardCornerRadius">@dimen/card_view_corner_radius</item>
+        <item name="cardElevation">@dimen/medium_elevation</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+</resources>

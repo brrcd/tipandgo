@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/sides_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/login_title"
+            android:theme="@style/Heading2"
+            tools:text="Login" />
+
+        <include
+            android:id="@+id/tab_layout"
+            layout="@layout/custom_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_tab_height"
+            android:layout_marginTop="@dimen/between_margin" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.tip_n_go.ui.custom.CustomPhoneEditText
+                android:id="@+id/phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_text_input_height"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_input"
+                style="@style/CustomTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/between_margin"
+                android:hint="@string/email"
+                app:hintTextAppearance="@style/Tags2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/CustomTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input"
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_margin"
+            app:hintTextAppearance="@style/Tags2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/between_margin"
+                android:text="@string/password_recovery"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/paragraph2_text_size"
+                tools:text="Forgot password?" />
+
+            <TextView
+                android:id="@+id/registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/between_margin"
+                android:text="@string/registration_title"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/paragraph2_text_size"
+                tools:text="Registration" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/sides_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:enabled="false"
+        android:text="@string/login_title"
+        android:textAllCaps="false" />
+
+    <include
+        android:id="@+id/loading_frame"
+        layout="@layout/loading_frame"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</FrameLayout>

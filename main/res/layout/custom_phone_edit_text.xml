@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@drawable/custom_text_input_bg">
+
+    <ImageView
+        android:id="@+id/icon_flag"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ad"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="50dp"
+        android:background="@null"
+        android:digits="0123456789 -+"
+        android:inputType="textNoSuggestions|phone"
+        android:maxLines="1"
+        android:hint="@string/phone"
+        android:textAppearance="@style/Paragraph2"
+        android:imeOptions="actionDone"/>
+</FrameLayout>

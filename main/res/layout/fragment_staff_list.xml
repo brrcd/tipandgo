@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/staff_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_new_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/between_margin"
+            android:layout_marginTop="@dimen/between_margin"
+            android:backgroundTint="@color/blue"
+            android:text="@string/add_new_user"
+            android:textAllCaps="false"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/staff_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_staff" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_frame"
+        layout="@layout/loading_frame"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</FrameLayout>

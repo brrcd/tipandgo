@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tab_layout"
+        layout="@layout/custom_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/custom_tab_height"
+        android:layout_marginHorizontal="@dimen/between_margin"
+        android:layout_marginTop="@dimen/between_margin"
+        android:layout_marginBottom="@dimen/small_margin" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/info_tab"
+                layout="@layout/custom_user_info_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/small_margin" />
+
+            <include
+                android:id="@+id/tips_chart_card"
+                layout="@layout/custom_tips_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <include
+                android:id="@+id/reviews_chart_card"
+                layout="@layout/custom_reviews_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <include
+                android:id="@+id/qr_code_tab"
+                layout="@layout/custom_action_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin"
+                android:layout_marginBottom="@dimen/between_margin" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tips_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_tip" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviews_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_review" />
+</LinearLayout>

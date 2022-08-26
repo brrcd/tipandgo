@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/between_margin"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_margin">
+
+            <TextView
+                android:id="@+id/role_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="14dp"
+                android:text="@string/staff_role"
+                android:textColor="@color/grey"/>
+
+            <Spinner
+                android:id="@+id/role_selector"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_text_input_height"
+                android:background="@drawable/custom_text_input_bg" />
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/staff_last_name"
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:hint="@string/last_name"
+            app:hintTextAppearance="@style/Tags2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/staff_first_name"
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:hint="@string/first_name"
+            app:hintTextAppearance="@style/Tags2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/staff_email"
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:hint="@string/email"
+            app:hintTextAppearance="@style/Tags2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.tip_n_go.ui.custom.CustomPhoneEditText
+            android:id="@+id/staff_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_text_input_height"
+            android:layout_marginTop="@dimen/small_margin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/staff_position"
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:hint="@string/staff_position"
+            app:hintTextAppearance="@style/Tags2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/sides_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:backgroundTint="@color/blue"
+        android:text="@string/save_action"
+        android:textAllCaps="false"/>
+
+    <include
+        android:id="@+id/success_layout"
+        layout="@layout/layout_success"
+        android:visibility="gone"/>
+</FrameLayout>

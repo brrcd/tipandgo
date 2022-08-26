@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@id/balance_card"
+                layout="@layout/custom_balance_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <include
+                android:id="@+id/tips_chart_card"
+                layout="@layout/custom_tips_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <include
+                android:id="@+id/reviews_chart_card"
+                layout="@layout/custom_reviews_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <include
+                android:id="@+id/history_card"
+                layout="@layout/custom_action_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <include
+                android:id="@+id/organizations_card"
+                layout="@layout/custom_action_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <include
+                android:id="@+id/settings_card"
+                layout="@layout/custom_action_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin" />
+
+            <include
+                android:id="@+id/sign_out_card"
+                layout="@layout/custom_action_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/between_margin"
+                android:layout_marginTop="@dimen/between_margin"
+                android:layout_marginBottom="@dimen/between_margin" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/loading_frame"
+        layout="@layout/loading_frame"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</FrameLayout>

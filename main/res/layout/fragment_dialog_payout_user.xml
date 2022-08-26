@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_margin">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@style/Heading1"
+                android:text="@string/withdraw"
+                tools:text="Title" />
+
+            <ImageView
+                android:id="@+id/close_button"
+                android:layout_width="@dimen/close_button_size"
+                android:layout_height="@dimen/close_button_size"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/between_margin"
+                android:scaleType="center"
+                android:src="@drawable/icon_close"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+        <include
+            android:id="@+id/balance_card"
+            layout="@layout/custom_balance_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_margin"
+            android:layout_marginHorizontal="@dimen/between_margin"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_margin"
+            android:background="@drawable/custom_text_input_bg"
+            android:layout_marginHorizontal="@dimen/between_margin">
+
+            <TextView
+                android:id="@+id/bank_card_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="14dp"
+                android:text="@string/card"
+                android:textColor="@color/grey"/>
+
+            <Spinner
+                android:id="@+id/bank_card_selector"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_text_input_height"/>
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amount"
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/between_margin"
+            android:layout_marginTop="@dimen/between_margin"
+            android:hint="@string/amount"
+            app:hintTextAppearance="@style/Tags2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/withdraw_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/sides_margin"
+            android:layout_marginTop="@dimen/bottom_margin"
+            android:layout_marginBottom="@dimen/bottom_margin"
+            android:text="@string/withdraw"
+            android:backgroundTint="@color/blue"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/dashboardNavigation">
+
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.tip_n_go.ui.fragment.ReviewsFragment"
+        android:label="ReviewsFragment"
+        tools:layout="@layout/fragment_reviews"/>
+    <fragment
+        android:id="@+id/tipsFragment"
+        android:name="com.tip_n_go.ui.fragment.TipsFragment"
+        android:label="TipsFragment"
+        tools:layout="@layout/fragment_tips"/>
+    <navigation android:id="@+id/profileNavigation"
+        app:startDestination="@id/profileFragment">
+        <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.tip_n_go.ui.fragment.ProfileFragment"
+            android:label="ProfileFragment"
+            tools:layout="@layout/fragment_profile">
+            <action
+                android:id="@+id/action_profileFragment_to_withdrawHistoryFragment"
+                app:destination="@id/withdrawHistoryFragment" />
+            <action
+                android:id="@+id/action_profileFragment_to_organizationsFragment"
+                app:destination="@id/organizationsFragment" />
+            <action
+                android:id="@+id/action_profileFragment_to_editProfileFragment"
+                app:destination="@id/editProfileFragment" />
+            <action
+                android:id="@+id/action_profileFragment_to_notificationsFragment"
+                app:destination="@id/notificationsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/withdrawHistoryFragment"
+            android:name="com.tip_n_go.ui.fragment.WithdrawHistoryFragment"
+            android:label="WithdrawHistoryFragment"
+            tools:layout="@layout/fragment_withdraw_history" />
+        <fragment
+            android:id="@+id/organizationsFragment"
+            android:name="com.tip_n_go.ui.fragment.OrganizationsFragment"
+            android:label="OrganizationsFragment"
+            tools:layout="@layout/fragment_organizations">
+            <action
+                android:id="@+id/action_organizationsFragment_to_editOrganizationFragment"
+                app:destination="@id/editOrganizationFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/editOrganizationFragment"
+            android:name="com.tip_n_go.ui.fragment.EditOrganizationFragment"
+            android:label="EditOrganizationFragment"
+            tools:layout="@layout/fragment_edit_organization"/>
+        <fragment
+            android:id="@+id/editProfileFragment"
+            android:name="com.tip_n_go.ui.fragment.EditProfileFragment"
+            android:label="EditProfileFragment"
+            tools:layout="@layout/fragment_edit_profile"/>
+        <fragment
+            android:id="@+id/notificationsFragment"
+            android:name="com.tip_n_go.ui.fragment.NotificationsFragment"
+            android:label="NotificationFragment"
+            tools:layout="@layout/fragment_notifications"/>
+    </navigation>
+    <navigation android:id="@+id/dashboardNavigation"
+        app:startDestination="@id/dashboardFragment">
+        <fragment
+            android:id="@+id/dashboardFragment"
+            android:name="com.tip_n_go.ui.fragment.DashboardFragment"
+            android:label="DashboardFragment"
+            tools:layout="@layout/fragment_dashboard" >
+            <action
+                android:id="@+id/action_dashboardFragment_to_staffListFragment"
+                app:destination="@id/staffListFragment" />
+            <action
+                android:id="@+id/action_dashboardFragment_to_distributedTipsFragment"
+                app:destination="@id/distributedTipsFragment" />
+            <action
+                android:id="@+id/action_dashboardFragment_to_tipDistributionFragment"
+                app:destination="@id/tipDistributionFragment" />
+            <action
+                android:id="@+id/action_dashboardFragment_to_editOrganizationFragment2"
+                app:destination="@id/editOrganizationFragment2" />
+            <action
+                android:id="@+id/action_dashboardFragment_to_settingsFragment"
+                app:destination="@id/settingsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/staffListFragment"
+            android:name="com.tip_n_go.ui.fragment.StaffListFragment"
+            android:label="StaffListFragment"
+            tools:layout="@layout/fragment_staff_list" >
+            <action
+                android:id="@+id/action_staffListFragment_to_addStaffFragment"
+                app:destination="@id/addStaffFragment" />
+            <action
+                android:id="@+id/action_staffListFragment_to_staffFragment"
+                app:destination="@id/staffFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/addStaffFragment"
+            android:name="com.tip_n_go.ui.fragment.AddStaffFragment"
+            android:label="AddStaffFragment"
+            tools:layout="@layout/fragment_add_staff"/>
+        <fragment
+            android:id="@+id/distributedTipsFragment"
+            android:name="com.tip_n_go.ui.fragment.DistributedTipsFragment"
+            android:label="DistributedTipsFragment"
+            tools:layout="@layout/fragment_distributed_tips"/>
+        <fragment
+            android:id="@+id/staffFragment"
+            android:name="com.tip_n_go.ui.fragment.StaffFragment"
+            android:label="StaffFragment"
+            tools:layout="@layout/fragment_staff">
+            <action
+                android:id="@+id/action_staffFragment_to_qrCodeFragment2"
+                app:destination="@id/qrCodeFragment2" />
+        </fragment>
+        <fragment
+            android:id="@+id/tipDistributionFragment"
+            android:name="com.tip_n_go.ui.fragment.TipDistributionFragment"
+            android:label="TipDistributionFragment"
+            tools:layout="@layout/fragment_tip_distribution"/>
+        <fragment
+            android:id="@+id/editOrganizationFragment2"
+            android:name="com.tip_n_go.ui.fragment.EditOrganizationFragment"
+            android:label="EditOrganizationFragment"
+            tools:layout="@layout/fragment_edit_organization"/>
+        <fragment
+            android:id="@+id/settingsFragment"
+            android:name="com.tip_n_go.ui.fragment.SettingsFragment"
+            android:label="SettingsFragment"
+            tools:layout="@layout/fragment_settings"/>
+        <fragment
+            android:id="@+id/qrCodeFragment2"
+            android:name="com.tip_n_go.ui.fragment.QrCodeFragment"
+            android:label="QrCodeFragment"
+            tools:layout="@layout/fragment_qr_code"/>
+    </navigation>
+    <fragment
+        android:id="@+id/qrCodeFragment"
+        android:name="com.tip_n_go.ui.fragment.QrCodeFragment"
+        android:label="QrCodeFragment" />
+    <action
+        android:id="@+id/action_global_qrCodeFragment"
+        app:destination="@id/qrCodeFragment"
+        app:launchSingleTop="true" />
+</navigation>

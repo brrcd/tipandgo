@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Heading1"
+            android:layout_marginHorizontal="@dimen/between_margin"
+            android:layout_marginTop="@dimen/between_margin"
+            android:layout_marginBottom="@dimen/between_margin"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/between_margin"
+            android:layout_marginBottom="@dimen/between_margin"
+            tools:text="@string/lorem_ipsum" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/options_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/between_margin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_option" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/between_margin"
+        android:layout_marginTop="@dimen/between_margin"
+        android:layout_marginBottom="@dimen/bottom_margin"
+        android:backgroundTint="@color/blue"
+        android:text="@string/save_action"
+        android:textAllCaps="false" />
+
+</FrameLayout>
