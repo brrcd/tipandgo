@@ -1,5 +1,15 @@
 # Tip&go
-</br> Screen examples
+</br> <details><summary>Libraries used</summary>
+* Retrofit
+* Coroutines
+* ViewModel
+* Navigation
+* Koin
+* Glide
+* HighCharts
+* FireBase
+* LeakCanary
+</details>Screen examples
 </br><details><summary>Login screen & registration</summary>
 <img src="https://github.com/brrcd/brrcd/blob/main/login_registration.gif" width="400" height="790">
 </details>
